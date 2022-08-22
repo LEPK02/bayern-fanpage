@@ -1,0 +1,17 @@
+#ultimate-team {
+  z-index: 2;
+}
+
+/* Navbar - Bayern Icon Animation */
+#navbar-logo {
+  transition: transform 1.5s ease-in-out;
+}
+
+#navbar-logo:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: transparent !important;
+}

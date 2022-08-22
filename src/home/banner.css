@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Custom class - .banner */
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 90px);
+  width: 100%;
+  padding: 0;
+}
+
+.banner-container {
+  padding: 15px 10px;
+  flex-direction: column;
+}
+
+/* Banner - image and content positioning */
+#banner-1 {
+  background-image: url(../images/allianz-arena-sunset.jpg);
+}
+
+#banner-2 {
+  background-image: url(../images/neuer-back.jpg);
+  padding: 0;
+}
+
+#banner-2 .banner-container,
+#banner-3-overlay,
+#banner-3-left .banner-container .container,
+#banner-3-right .banner-container .container,
+#banner-4 .banner-container {
+  background-color: hsla(210, 10.81%, 14.51%, 0.8);
+  color: white;
+}
+
+#banner-2 .banner-container button,
+#banner-4 .container .banner-container button {
+  font-size: 1em;
+  line-height: 1.2;
+  vertical-align: baseline;
+  padding: 6px;
+}
+
+#banner-3 {
+  position: relative;
+  padding: 0;
+}
+
+#banner-3-overlay {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#banner-3-left {
+  background-image: url(../images/franz-beckenbauer.jpg);
+}
+
+#banner-3-right {
+  background-image: url(../images/lifting-ucl-2020.jpg);
+}
+
+#banner-3-left .container-fluid .container:focus-visible,
+#banner-3-right .container-fluid .container:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+#banner-3-left .container-fluid .container h1:focus-visible,
+#banner-3-right .container-fluid .container h1:focus-visible {
+  outline: none;
+}
+
+#banner-4 {
+  background-image: url(../images/allianz-arena-skybox.jpg);
+  flex-direction: column;
+  padding: 0;
+}
+
+#banner-4 .container {
+  height: calc(100vh - 90px - 46px);
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+#banner-4 .container .banner-container {
+  height: fit-content;
+  width: 100vw;
+  padding: 0;
+}
+
+#banner-4 .container-fluid {
+  padding: 0;
+  height: 46px;
+}
+
+/* Hover Animation */
+.hover-left {
+  background: linear-gradient(rgba(255, 255, 255, 0.9) 0 0) calc(100% - var(--p, 0%)) / var(--p, 0%) no-repeat;
+  transition: .4s, background-position 0s;
+  border: solid #f8f9fa 1px;
+  border-radius: .25rem;
+  margin: 0;
+  min-width: fit-content;
+}
+
+.hover-right {
+  background: linear-gradient(rgba(255, 255, 255, 0.9) 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+  transition: .4s, background-position 0s;
+  border: solid #f8f9fa 1px;
+  border-radius: .25rem;
+  margin: 0;
+  min-width: fit-content;
+}
+
+.hover-left:hover,
+.hover-right:hover {
+  --p: 100%;
+  cursor: pointer;
+}
+
+.hover-left:hover h1,
+.hover-left:hover p,
+.hover-right:hover h1,
+.hover-right:hover p {
+  color: #000;
+}
+
+/* Scroll Indicator */
+#indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  color: white;
+  width: 10vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 3;
+  left: calc(50% - 5vw);
+  bottom: 10px;
+  animation: show 1s 4s forwards;
+  opacity: 0;
+}
+
+#indicator p {
+  margin: 0;
+  pointer-events: none;
+}
+
+#indicator svg {
+  width: 10vw;
+  height: 10vh;
+  filter: brightness(0) invert(1);
+  animation: flash 3s 5s infinite linear;
+}
+
+#indicator.vanish {
+  pointer-events: none;
+  display: none;
+  animation: hide 1s 5s forwards;
+}
+
+@keyframes flash {
+  0%, 50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  to { opacity: 1; }
+}
+
+@keyframes hide {
+  to { opacity: 0; }
+}

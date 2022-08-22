@@ -1,0 +1,23 @@
+/* Navbar - dropdown icon theme colours */
+#navmenu div {
+  background-color: #212529;
+  &:active {
+    color: #fff;
+    background-color: transparent;
+  }
+  a {
+    color: rgba(255,255,255,.55);
+    &:hover {
+      color: rgba(255,255,255,.75);
+      background-color: transparent;
+    }
+    &:focus-visible {
+      color: rgba(255,255,255,.75);
+    }
+    &[aria-expanded="true"] {
+      color: #fff;
+    }
+  }
+}
+
+@import "~bootstrap/scss/bootstrap";

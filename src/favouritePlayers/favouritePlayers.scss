@@ -1,0 +1,62 @@
+$carousel-control-height: 38px;
+
+#favourite-players-carousel {
+  width: 100vw;
+  height: calc(100vh - 90px);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-image: url(../images/neuer-walkout.jpg);
+  transition: all 1s ease-in-out;
+  .container {
+    width: 60vw;
+    height: 50vw;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    object-fit: contain;
+    padding: 0;
+    .carousel {
+      background-color: rgba(33, 37, 41, 0.95);
+      border-radius: 5px;
+      .carousel-inner{
+        .carousel-item {
+          .form-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+            h1, p {
+              color: white;
+            }
+            img {
+              filter: brightness(0) invert(1);
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+      }
+      .carousel-control-next, .carousel-control-prev {
+        width: fit-content;
+        height: fit-content;
+        opacity: 1;
+        position: absolute;
+        display: inline-block;
+        top: calc(100% - 20px - #{$carousel-control-height});
+      }
+      .carousel-control-next {
+        right: 20px;
+      }
+      .carousel-control-prev {
+        left: 20px;
+      }
+    }
+  }
+}
