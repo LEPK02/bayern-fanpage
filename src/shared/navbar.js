@@ -19,8 +19,6 @@ class NavBar extends React.Component {
               <img
                 src="../images/white-bayern-logo.png"
                 alt="Bayern logo"
-                width="64"
-                height="64"
                 id="navbar-logo"
                 className="d-inline-block align-text-center"
               />

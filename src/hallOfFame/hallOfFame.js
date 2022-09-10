@@ -5,7 +5,7 @@ class HallOfFame extends React.Component {
   render() {
     return (
       <>
-        <Outlet />          
+        <Outlet />
       </>
     );
   }

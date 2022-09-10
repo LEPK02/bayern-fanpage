@@ -3,8 +3,14 @@
 }
 
 /* Navbar - Bayern Icon Animation */
+.navbar {
+  min-height: 90px;
+}
+
 #navbar-logo {
   transition: transform 1.5s ease-in-out;
+  width: 32px;
+  height: 32px;
 }
 
 #navbar-logo:hover {
@@ -14,4 +20,11 @@
 .dropdown-item.active,
 .dropdown-item:active {
   background-color: transparent !important;
+}
+
+@media (min-width: 300px) {
+  #navbar-logo {
+    width: 64px;
+    height: 64px;
+  }
 }

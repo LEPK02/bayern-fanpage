@@ -11,6 +11,7 @@ html {
 
 body {
   padding-top: 90px;
+  overflow: hidden; /* hide scrollbars */
 }
 
 #root {

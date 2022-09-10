@@ -7,6 +7,7 @@ import './index.css';
 
 import NavBar from './shared/navbar';
 import Banner from './home/banner';
+import AboutUs from './aboutUs/aboutUs';
 import FavouritePlayers from './favouritePlayers/favouritePlayers';
 import HallOfFame from './hallOfFame/hallOfFame';
 import Guide from './hallOfFame/guide';
@@ -21,6 +22,7 @@ root.render(
       <Routes>
         <Route exact path='/' element={<Banner />} />
         <Route path='favouritePlayers' element={<FavouritePlayers />} />
+        <Route path='aboutUs' element={<AboutUs />} />
         <Route path='hallOfFame' element={<><Guide /><HallOfFame/></>}>
           <Route path='players' element={<HOFPlayers />} />
           <Route path='teams' element={<HOFTeams />} />

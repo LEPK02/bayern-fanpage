@@ -1,0 +1,40 @@
+.about {
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 90px);
+  width: 100%;
+  padding: 0;
+  h1, h2 {
+    color: white;
+    font-size: medium;
+    width: 100%;
+  }
+  p {
+    color: white;
+    font-size: small;
+    width: 100%;
+  }
+}
+.about-icon {
+  filter: brightness(0) invert(1);
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .about {
+    align-items: top;
+    h1, h2 {
+      font-size: x-large;
+    }
+    p {
+      font-size: medium;
+    }
+  }
+  .about-icon {
+    filter: brightness(0) invert(1);
+    width: 40vw;
+    height: calc((100vh - 90px) - 10vh);;
+  }
+}

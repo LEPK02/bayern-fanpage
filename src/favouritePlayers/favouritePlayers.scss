@@ -40,6 +40,18 @@ $carousel-control-height: 38px;
               width: 32px;
               height: 32px;
             }
+            .container-fluid {
+              .custom-tooltip {
+                --bs-tooltip-bg: var(--bs-primary);
+              }
+              button {
+                &:hover {
+                  img {
+                    filter: brightness(0) invert(0);
+                  }
+                }
+              }
+            }
           }
         }
       }

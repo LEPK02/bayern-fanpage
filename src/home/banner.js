@@ -10,9 +10,8 @@ import Button from 'react-bootstrap/Button';
 
 import './banner.css';
 
+import ScrollHint from '../shared/scrollHint'
 import Footer from '../shared/footer';
-
-import {ReactComponent as ChevronDown} from '../images/chevron-compact-down.svg';
 
 class Banner extends React.Component {
   constructor(props) {
@@ -54,10 +53,7 @@ class Banner extends React.Component {
             <Container fluid className="banner-container d-flex justify-content-top h-75">
               <h1 className="fw-light text-center">Welcome</h1>
               <p className='text-center'>Vote for your favourite players and discover legends</p>
-              <Container id='indicator' className={this.state.currentPage < 1 ? '' : 'vanish'}>
-                <p className='text-center'>scroll/swipe</p>
-                <ChevronDown />
-              </Container>
+              <ScrollHint currentPage={this.currentPage} />
             </Container>
           </Container>
           <Container fluid className="banner d-flex align-items-center" id="banner-2">
