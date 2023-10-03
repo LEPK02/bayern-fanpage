@@ -16,12 +16,12 @@ function Footer() {
       <Container fluid className='text-center footer'>
         <Row>
           <Col>
-            <HashLink to="/aboutUs#contact-us">
+            <HashLink to="/aboutUs#about">
               <Container fluid
                 className={isActive["active1"] ? 'active' : ''}
                 onClick={() => setIsActive({active1: true, active2: false})}
               >
-                <p className='footer-text' tabIndex={0}>Contact Us</p>
+                <p className='footer-text' tabIndex={0}>Contact</p>
               </Container>
             </HashLink>
           </Col>

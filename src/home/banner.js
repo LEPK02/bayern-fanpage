@@ -12,6 +12,7 @@ import './banner.css';
 
 import ScrollHint from '../shared/scrollHint'
 import Footer from '../shared/footer';
+import { Link } from 'react-router-dom';
 
 class Banner extends React.Component {
   constructor(props) {
@@ -59,7 +60,9 @@ class Banner extends React.Component {
           <Container fluid className="banner d-flex align-items-center" id="banner-2">
             <Container fluid className="banner-container">
               <h1 className="fw-light text-center">
-                <Button variant="outline-light fw-light">Vote</Button> for your favourite players
+                <Link to="/favouritePlayers" variant="white" tabIndex={0}>
+                  <Button variant="outline-light fw-light">Vote</Button>
+                </Link> for your favourite players
               </h1>
               <p className='text-center'>Pick from Neuer, Beckenbauer, Matthäus, Müller and co.</p>
             </Container>
@@ -86,8 +89,10 @@ class Banner extends React.Component {
               <Col>
                 <Container fluid id="banner-3-right" className="banner">
                   <Container fluid className="banner-container d-flex justify-content-end align-items-center h-75">
-                    <Container className='hover-right w-75' tabIndex={0}>
-                      <h1 className="fw-light text-center">Teams</h1>
+                    <Container className='hover-right w-75'>
+                      <LinkContainer to="hallOfFame/teams" tabIndex={0}>
+                        <h1 className="fw-light text-center">Teams</h1>
+                      </LinkContainer>
                     </Container>
                   </Container>
                 </Container>
@@ -97,7 +102,10 @@ class Banner extends React.Component {
           <Container fluid id="banner-4" className='banner d-flex align-items-center'>
             <Container className='d-flex align-items-center'>
               <Container className='banner-container d-flex justify-content-center h-50'>
-                <h1 className="fw-light text-center">Find out more <Button variant="outline-light fw-light">about us</Button></h1>
+                <h1 className="fw-light text-center">Find out more <Link to="/aboutUs" variant="white" tabIndex={0}>
+                    <Button variant="outline-light fw-light">about me</Button>
+                  </Link>
+                </h1>
                 <p className='text-center'>Our goals and background information</p>
               </Container>
             </Container>

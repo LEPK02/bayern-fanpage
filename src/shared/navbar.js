@@ -31,7 +31,7 @@ class NavBar extends React.Component {
                   <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/aboutUs">
-                  <Nav.Link>About Us</Nav.Link>
+                  <Nav.Link>About</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/favouritePlayers">
                   <Nav.Link>Favourite Players</Nav.Link>
