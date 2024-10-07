@@ -35,8 +35,6 @@ class AboutUs extends React.Component {
           containerHeight={window.innerHeight - 90}
           customPageNumber={this.state.currentPage}
           animationTimer={800}
-          blockScrollUp={this.state.show}
-          blockScrollDown={this.state.show}
         >
           <Container fluid className="about d-flex align-items-center">
             <Row className='gy-0 w-100'>
