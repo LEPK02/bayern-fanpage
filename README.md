@@ -1,2 +1,2 @@
 # Bayern Fanpage v1
-View on [Vercel](https://bayern-fanpage.vercel.app/)
+[View website here](https://fanpage-v1.vercel.app/) (hosted by [Vercel](https://vercel.com/))
